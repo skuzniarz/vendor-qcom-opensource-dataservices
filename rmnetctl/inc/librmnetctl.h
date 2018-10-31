@@ -454,27 +454,6 @@ int rmnet_new_vnd_prefix(rmnetctl_hndl_t *hndl,
 			 const char *prefix);
 
 /*!
- * @brief Public API to create a new virtual device node with a custom prefix
- * @details Message type is RMNET_NETLINK_NEW_VND or
- * RMNETCTL_FREE_VND based on the flag for new_vnd
- * @param hndl RmNet handle for the Netlink message
- * @param id Node number to create the virtual network device node
- * @param error_code Status code of this operation returned from the kernel
- * @param new_vnd creates a new virtual network device if  RMNETCTL_NEW_VND or
- * frees the device if RMNETCTL_FREE_VND
- * @param name Name to be used when naming the network interface
- * @return RMNETCTL_SUCCESS if successful
- * @return RMNETCTL_LIB_ERR if there was a library error. Check error_code
- * @return RMNETCTL_KERNEL_ERR if there was an error in the kernel.
- * Check error_code
- * @return RMNETCTL_INVALID_ARG if invalid arguments were passed to the API
- */
-int rmnet_new_vnd_name(rmnetctl_hndl_t *hndl,
-			 uint32_t id,
-			 uint16_t *error_code,
-			 const char *name);
-
-/*!
  * @brief API to get the ASCII name of a virtual network device from its ID
  * @param hndl RmNet handle for the Netlink message
  * @param id Node number to create the virtual network device node
